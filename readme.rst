@@ -1,5 +1,5 @@
 ###################
-What is CodeIgniter 3
+What is CodeIgniter 4
 ###################
 
 CodeIgniter is an Application Development Framework - a toolkit - for people
