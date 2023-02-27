@@ -68,7 +68,7 @@
 											<a href="<?php echo site_url("letters/addLetter");?>">Add new letter</a>
 										</li>
 										<li>
-											<a href="<?php echo site_url("letters/letterListing");?>">Letter Listing Summary</a>
+											<a href="<?php echo site_url("letters/formBundleResult");?>">Letter Listing Summary</a>
 										</li>
 									</ul>
 								</div>

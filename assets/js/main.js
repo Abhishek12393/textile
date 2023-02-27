@@ -152,10 +152,6 @@ $(function () {
 
 
 
-
-
-
-
 // Custom Sidebar JS
 jQuery(function ($) {
 

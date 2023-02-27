@@ -47,11 +47,25 @@ class Letters extends CI_Controller {
 	public function letter_listing(){
 
 		$this->admin_model->check_auth();
-		$data['users']	=	$this->admin_model->fetch_all_by_condition('admin_users',array('deleted'=>'0'),'*');
-		$this->load->view('users/index',$data);
+		$data['message']	=	$this->admin_model->fetch_all_by_condition('admin_users',array('deleted'=>'0'),'*');
+		$this->load->view('admin/letters/letter_listing',$data);
 
 	}
 
+	public function  addLetter(){
+		// also add new letter
 
+		$data = [];
+		$this->load->view('admin/letters/add_new_bundle',$data);
+
+	}
+
+	public function  formBundleResult(){
+		// letter listing summary 
+
+		$data['message'] = [];
+		$this->load->view('admin/letters/form_bundle_result',$data);
+
+	}
 
 }

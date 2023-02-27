@@ -8,7 +8,7 @@
 		<!-- Meta -->
 		<meta name="description" content="Responsive Bootstrap4 Dashboard Template">
 		<meta name="author" content="ParkerThemes">
-		<link rel="shortcut icon" href="<?php echo base_url('assets/'); ?>img/fav.png" />
+		<link rel="shortcut icon" href="<?php echo base_url('assets/'); ?>img/logo/handicraft-logo.png" />
 
 		<!-- Title -->
 		<title>Handloom</title>
