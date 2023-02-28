@@ -134,9 +134,6 @@ $(document).ready(function(){
 
 
 
-
-
-
 // Bootstrap JS ***********
 
 // Tooltip
@@ -147,9 +144,6 @@ $(function () {
 $(function () {
 	$('[data-toggle="popover"]').popover()
 })
-
-
-
 
 
 // Custom Sidebar JS

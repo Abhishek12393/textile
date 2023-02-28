@@ -1,7 +1,7 @@
 // Basic DataTable
 $(function(){
 	$('#basicExample').DataTable({
-		'iDisplayLength': 4,
+		'iDisplayLength': 10,
 		"language": {
 			"lengthMenu": "Display _MENU_ Records Per Page",
 			"info": "Showing Page _PAGE_ of _PAGES_",
@@ -9,7 +9,7 @@ $(function(){
 	});
 });
 
-
+ 
 
 // FPrint/Copy/CSV
 $(function(){

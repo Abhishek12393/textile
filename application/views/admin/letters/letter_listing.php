@@ -18,7 +18,7 @@
 				<div class="page-header">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item">Home</li>
-						<li class="breadcrumb-item active">Listing</li>
+						<li class="breadcrumb-item active">Letter Listing</li>
 					</ol>
 
 					<ul class="app-actions">
@@ -43,62 +43,62 @@
 					<!-- Row start -->
 					<div class="row gutters">
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-							
-							<div class="table-container">
-								<div class="t-header">Letter Listing</div>
+							<div class="card lobipanel-basic">
+								<div class="card-header">
+									<div class="card-title">Form Bundle Listing</div>
+								</div>
+								<div class="card-body">
+								 
 								<div class="table-responsive">
-									<table id="basicExample" class="table custom-table">
-										<thead>
-											<tr>
-												<tr>ID</tr>
-												<th>RDO</th>
-												<th>ADO</th>
-												<th>Photo & Signature</th>
-												<th>Letter No</th>
-												<th>No. of Form</th>
-												<th>No. of Data Entry</th>
-												<th>No. of Verified</th>
-												<th>No. of Rejected</th>
-												<th>No. of PDF Genrated</th>
-												<th>Form Uploaded</th>
-												<th>Letter Date</th>
-												<th>Added Date</th>
-												<th>Action</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php foreach($message as $m){ ?>
-											<tr>
-											<td><?php echo $m->regional_office_id; //need to join rdo with this ?></td> 
-											<td><?php echo $m->city; ?></td>
-											<td><?php echo $m->city_code; ?></td>
-											<td><?php echo $m->state; ?></td>
-											<td><?php echo $m->address1; ?></td>
-											<td><?php echo $m->address1; ?></td>
-											<td><?php echo $m->address1; ?></td>
-											<td><?php echo $m->address1; ?></td>
-											<td><?php echo $m->address1; ?></td>
-											<td><?php echo $m->address1; ?></td>
-											<td><?php echo $m->address1; ?></td>
-											<td><img src="http://tricorniotech.com/admin/uploads/user_image/assistant_director_signature/thumb/<?= $m->office_head_signature_thumb; ?>" height="50"></td>
-											<td><?php echo $m->created; ?></td>
-											<td class="td-actions">
-													<a href="<?php echo site_url("ado/edit/").$m->id; ?>" class="icon green" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit Row">
-														<i class="icon-circle-with-minus"></i>
-													</a>
-													<a href="#" class="icon blue" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete Row">
-														<i class="icon-cancel"></i>
-													</a>
-											</td>
- 
-											</tr>
+											<table id="basicExample2" class="table custom-table">
+												<thead>
+													<tr>
+														<th>ID</th>
+													 <th>RDO</th>
+															<!--<th>ADO</th>
+														<th>Photo & Signature</th>
+														<th>Letter No</th>
+														<th>No. of Form</th>
+														<th>No. of Data Entry</th>
+														<th>No. of Verified</th>
+														<th>No. of Rejected</th>
+														<th>No. of PDF Genrated</th>
+														<th>Form Uploaded</th>
+														<th>Letter Date</th>
+														<th>Added Date</th>
+														<th>Action</th> -->
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>data</td>
+														<td>data</td>
+												</tr>
+													 
+												</tbody>
+											</table>
+										</div>
+								</div>
 
-											<?php } ?>
-											 
-										</tbody>
-									</table>
+								<div class="table-container">
+								<div class="t-header">Ajax --</div>
+								<div class="table-responsive">
+									<table id="table-listing" class="table custom-table">
+										<thead>
+										<tr>
+												<th>First name</th>
+												<th>Last name</th>
+		 
+										</tr>
+
+										</thead>
+			 
+						    	</table>
 								</div>
 							</div>
+
+							</div>
+
 
 						</div>
 					</div>
@@ -142,20 +142,85 @@
 		<script src="<?php echo base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap.min.js"></script>
 		
 		<!-- Custom Data tables -->
-		<script src="<?php echo base_url('assets/'); ?>vendor/datatables/custom/custom-datatables.js"></script>
-		<script src="<?php echo base_url('assets/'); ?>vendor/datatables/custom/fixedHeader.js"></script>
+		<!-- <script src="<?php echo base_url('assets/'); ?>vendor/datatables/custom/custom-datatables.js"></script>
+		<script src="<?php echo base_url('assets/'); ?>vendor/datatables/custom/fixedHeader.js"></script> -->
 
 		<!-- Download / CSV / Copy / Print -->
-		<script src="<?php echo base_url('assets/'); ?>vendor/datatables/buttons.min.js"></script>
+		<!-- <script src="<?php echo base_url('assets/'); ?>vendor/datatables/buttons.min.js"></script>
 		<script src="<?php echo base_url('assets/'); ?>vendor/datatables/jszip.min.js"></script>
 		<script src="<?php echo base_url('assets/'); ?>vendor/datatables/pdfmake.min.js"></script>
 		<script src="<?php echo base_url('assets/'); ?>vendor/datatables/vfs_<?php echo base_url('assets/'); ?>fonts/.js"></script>
 		<script src="<?php echo base_url('assets/'); ?>vendor/datatables/html5.min.js"></script>
-		<script src="<?php echo base_url('assets/'); ?>vendor/datatables/buttons.print.min.js"></script>
+		<script src="<?php echo base_url('assets/'); ?>vendor/datatables/buttons.print.min.js"></script> -->
 
 
 		<!-- Main JS -->
-		<script src="<?php echo base_url('assets/'); ?>js/main.js"></script>
+		<!-- <script src="<?php echo base_url('assets/'); ?>js/main.js"></script> -->
+
+		<script>
+			    // jQuery(window).load(function ()
+					// {
+					// 		var $ = jQuery;
+					
+					// 		table = $('#table-listing').DataTable({ 
+					
+					// 				"processing": true, //Feature control the processing indicator.
+					// 				"serverSide": true, //Feature control DataTables' server-side processing mode.
+					// 				"order": [], //Initial no order.,
+							
+					// 				// Load data for the table's content from an Ajax source
+					// 				"ajax": {
+					// 						"url": "<?php echo base_url()?>index.php?admin/ajax_form_bundle_listings",
+					// 						"type": "POST"
+					// 				},
+					// 		"lengthMenu": [ 50, 100, 200, 400, 600 ],
+					
+					// 				//Set column definition initialisation properties.
+					// 				"columnDefs": [
+					// 				{ 
+					// 						"targets": [ 3, 4, 5, 6, 7, 8, 11 ], //first column / numbering column
+					// 						"orderable": false, //set not orderable
+					// 				},
+					// 				],
+					
+					// 		});
+					// 		//alert('asdf');
+					// 		$(".dataTables_wrapper select").select2({
+					// 				minimumResultsForSearch: -1
+					// 		});
+						
+					// });
+				  
+					$(document).ready(function () {
+								$('#table-listing').DataTable( {
+									
+									processing: true,
+									serverSide: true,
+									"order": [], //Initial no order.,
+									ajax: {
+												url: '<?php echo base_url('/letters/ajax_form_bundle_listing'); ?>',
+												dataSrc: 'data',
+												type: "POST",
+								 
+											},
+										columns:  [
+											{ data: 'first_name' },
+											{ data: 'last_name' } 
+										],
+										"lengthMenu": [ 5, 50, 100, 200, 400, 600 ],
+										"iDisplayLength": 5,
+										"language": {
+											"lengthMenu": "Display _MENU_ Records Per Page",
+											"info": "Showing Page _PAGE_ of _PAGES_",
+										}
+										 
+										 
+								} );
+				
+					})
+					 
+ 
+		</script>
 
 	</body>
 </html>

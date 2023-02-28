@@ -151,5 +151,37 @@ class Admin_model extends CI_Model {
 
 
 	// letters
+
+
+	private function _get_bundle_listings_query(){				
+		//just pass false param to not put fields in	
+		$this->db->select("fb.*, ro.regional_title, ro.regional_code, ado.city", false);
+		$this->db->from('tt_form_bundles fb')->join('tt_regional_office ro', 'fb.regional_office_id=ro.id', 'left')->join('tt_assistant_director_office ado', 'fb.assistant_director_office_id=ado.id', 'left');
+		
+		//$this->db->where('ru.is_verified', 1);
+	  	   
+	   if($_POST['search']['value']){		   
+		  $this->db->where('(ro.regional_code LIKE "%'.$_POST['search']['value'].'%" OR ado.city LIKE "%'.$_POST['search']['value'].'%" OR fb.dch_letter_no LIKE "%'.$_POST['search']['value'].'%")', null, false);
+	   }
+	   
+	   $column_order = array('ro.regional_code', 'ado.city', 'fb.dch_letter_no', '','','','','','','fb.created', 'fb.date_of_receipt_of_form', ''); //set column field database for datatable orderable	   	
+	    if(isset($_POST['order'])){
+            $this->db->order_by($column_order[$_POST['order']['0']['column']], $_POST['order']['0']['dir']);
+        }else{
+			$this->db->order_by("fb.id", "desc"); 
+		}
+	   	    
+	}
+
+		function select_bundle_listings(){
+				/* return $this->db->query("SELECT fb.*, ro.regional_title, ro.regional_code, ado.city FROM tt_form_bundles fb LEFT JOIN tt_regional_office ro ON fb.regional_office_id=ro.id LEFT JOIN tt_assistant_director_office ado ON fb.assistant_director_office_id=ado.id ORDER BY fb.id DESC")->result_array();*/
+			//echo $this->db->last_query();
+			$this->_get_bundle_listings_query();
+			if($_POST['length'] != -1)
+					$this->db->limit($_POST['length'], $_POST['start']);
+					$query = $this->db->get();
+					//return $query->result();
+			return $query->result_array();
+	}
 	
 }
