@@ -207,6 +207,11 @@
 											{ data: 'first_name' },
 											{ data: 'last_name' } 
 										],
+										"drawCallback": function (settings) { 
+											// Here the response
+												var response = settings.json;
+												console.log(response , 'response');
+										},
 										"lengthMenu": [ 5, 50, 100, 200, 400, 600 ],
 										"iDisplayLength": 5,
 										"language": {
